@@ -1,0 +1,48 @@
+body{
+	background-color: #f0f0f0;
+}
+
+.judul_login{
+	color:#1e90ff;
+}
+
+
+nav.navbar{
+	background-color:#1E90FF;
+	
+	
+}
+.navbar-inverse .navbar-brand {
+
+    color: #fcfcfc;
+    font-size:20px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+
+    color: white;
+    font-size:20px;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: white;  
+}
+
+footer{
+	padding-top:25px;
+	position:fixed;
+	background-color:#228B22;
+	bottom:0;
+	right:0;
+	left:0;
+}
+
+footer p{
+	color:white;
+	font-size:20px;
+}
+
+.box-chat{
+	max-height: 400px;
+	overflow: auto;
+}
