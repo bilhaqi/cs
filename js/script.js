@@ -32,11 +32,7 @@ $("#login").submit(function(event){
    
 }
 
-$("#formSearch").submit(function(event){
-    // cancels the form submission
-    event.preventDefault();
-    submitSearch();
-});
+
 function submitSearch(){
     $("#box").html(`<br>`);
     let listSearch = $("#list-search").val();
@@ -72,11 +68,26 @@ function submitSearch(){
                             </div>
                         `);
                });
+
+
             }
+                           $("#list-search").val('');
         }
     });
 
 }
+
+$("#btn-search").on('click',function(){
+    // cancels the form submission
+    submitSearch();
+});
+$("#list-search").on('keyup',function(e){
+
+    if(e.keyCode == 13){
+        submitSearch();
+    }
+    
+});
 
 $("#formSend").submit(function(event){
     // cancels the form submission
@@ -108,6 +119,14 @@ $("#formSend").submit(function(event){
  
    
 }
+
+
+      // ajax untuk ambil data baru di message
+    var auto_refresh = setInterval(
+    function () {
+       $('#box-pengirim').load("../chat/message/load_pengirim.php").fadeIn("slow");
+    }, 2000); // refresh setiap 10000 milliseconds
+
 
 });
 

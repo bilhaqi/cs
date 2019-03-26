@@ -84,13 +84,13 @@ $query_1=lihat("SELECT id_chat,id_penerima,id_pengirim FROM tbl_chat WHERE id_pe
 
          <div class="row" style="margin-top:20px;">
          	<div class="col-md-8 col-sm-offset-2">
-         		<form action="" id="formSearch">
+         		
          	<input type="text" class="form-control" placeholder="Search People example @bilhaqi28" id="list-search" required autocomplete="off">
          	</div>
          	<div class="col-sm-offset-0">
          		<button class="btn btn-info" id="btn-search">Search</button>
          	</div>
-          </form>
+          
          </div>
          <div id="box">
          	<br>
@@ -102,7 +102,7 @@ $query_1=lihat("SELECT id_chat,id_penerima,id_pengirim FROM tbl_chat WHERE id_pe
   		<div class="col-sm-3 sidebar-offcanvas" id="sidebar">
         <h3  style="color:#5bc0de;">History : <?php echo $_SESSION['nama_user']; ?></h3>
           
-
+          <div id="box-pengirim">
           <div class="list-group">
         <?php foreach ($query_1 as $b ) { 
           $pengirim=$b['id_pengirim']; 
@@ -113,6 +113,7 @@ $query_1=lihat("SELECT id_chat,id_penerima,id_pengirim FROM tbl_chat WHERE id_pe
             <a href="?page=send&id_user=<?php echo $c['id_user'];  ?>" class="list-group-item"><?php echo $c['nama_pengirim']; ?></a>
           <?php } ?>
         <?php } ?>
+          </div>
           </div>
 
           </div>
